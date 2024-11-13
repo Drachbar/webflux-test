@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: reactivetest
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/reactive_springular_test
+    username: postgres
+    password: password
