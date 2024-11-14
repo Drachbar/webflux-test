@@ -15,21 +15,11 @@ import java.util.List;
 @EnableWebFluxSecurity
 public class SecurityConfig {
 
-//    @Bean
-//    public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-//        http
-//                .cors().disable()
-//                .authorizeExchange(exchanges -> exchanges.anyExchange().permitAll())
-//        ;
-//        return http.build();
-//    }
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-        http
-                .authorizeExchange(exchanges -> exchanges.anyExchange().permitAll());
+        http.authorizeExchange(exchanges -> exchanges.anyExchange().permitAll());
         return http.build();
     }
-
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
